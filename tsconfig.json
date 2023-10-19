@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    // "types": ["bun-types"]
+  }
+}
