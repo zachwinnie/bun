@@ -100,10 +100,13 @@ tsc react.tsx --esModuleInterop --jsx react --outDir ./build
 
 # Ruby
 
+For comparison, we can also run a Ruby (Rack) server.
+
 ## Install
 
 ```bash
 curl -sSL https://get.rvm.io | bash -s stable
+rvm install 3.2.2
 ```
 
 More at https://rvm.io
@@ -121,4 +124,24 @@ Then run the server:
 
 ```bash
 rackup
+```
+
+# Benchmarking
+
+While servers above are running, you can run [autocannon](https://github.com/mcollina/autocannon) benchmarking:
+
+```bash
+npm run autocannon:bun
+npm run autocannon:deno
+npm run autocannon:node
+npm run autocannon:ruby
+```
+
+Alternatively, you can run [loadtest](https://github.com/alexfernandez/loadtest):
+
+```bash
+npm run loadtest:bun
+npm run loadtest:deno
+npm run loadtest:node
+npm run loadtest:ruby
 ```
