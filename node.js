@@ -6,4 +6,6 @@ http.createServer((request, response) => {
   });
   response.write('Hello, World');
   response.end();
-}).listen(3001);
+}).listen(3001, () => {
+  console.log('Node server running at http://localhost:3001');
+});

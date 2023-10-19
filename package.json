@@ -7,10 +7,20 @@
     "@types/node": "20.8.7",
     "@types/react": "18.2.29",
     "@types/react-dom": "18.2.14",
-    "bun-types": "^1.0.6",
+    "autocannon": "7.12.0",
+    "bun-types": "1.0.6",
+    "loadtest": "8.0.3",
     "typescript": "5.2.2"
   },
   "scripts": {
+    "autocannon:bun": "autocannon --duration 60 http://localhost:3000",
+    "autocannon:deno": "autocannon --duration 60 http://localhost:3002",
+    "autocannon:node": "autocannon --duration 60 http://localhost:3001",
+    "autocannon:ruby": "autocannon --duration 60 http://localhost:9292",
+    "loadtest:bun": "loadtest -c 10 -t 60 http://localhost:3000",
+    "loadtest:deno": "loadtest -c 10 -t 60 http://localhost:3002",
+    "loadtest:node": "loadtest -c 10 -t 60 http://localhost:3001",
+    "loadtest:ruby": "loadtest -c 10 -t 60 http://localhost:9292",
     "node:serve": "node node.js",
     "node:watch": "node --watch node.js",
     "tsc:build": "tsc react.tsx --outDir ./build"
